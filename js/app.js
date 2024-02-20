@@ -7,7 +7,8 @@ for (let i = 1; i <= 3; i++) {
     }
 }
 
-console.log(jogosAlugados);
+let gramatica = jogosAlugados == 1 ? 'jogo alugado' : 'jogos alugados';
+alert(`Você possui ${jogosAlugados} ${gramatica}!`);
 
 function alterarStatus(id) {
     let botaoJogo = document.querySelector(`#game-${id} > .dashboard__item__button`);
@@ -22,7 +23,7 @@ function alterarStatus(id) {
         botaoJogo.textContent = 'Alugar';
         botaoJogo.classList.remove('dashboard__item__button--return');
         capaJogo.classList.remove('dashboard__item__img--rented');
-        alert(`Agradecemos por devolver o jogo ${nomeJogo}!`);
+        alert(`Agradecemos por devolver o jogo ${nomeJogo}. Volte sempre!`);
     }
 
     jogosAlugados = 0;
@@ -34,15 +35,6 @@ function alterarStatus(id) {
         }
     }
 
-    console.log(jogosAlugados);
-}
-
-let numeros = [7, 4, 9];
-numeros.sort();
-
-console.log(numeros);
-
-function ordenarNumeros(a, b, c) {
-    let numeros = [a, b, c];
-    numeros.sort();
+    let gramatica = jogosAlugados == 1 ? 'jogo alugado' : 'jogos alugados';
+    alert(`Você possui ${jogosAlugados} ${gramatica}!`);
 }
